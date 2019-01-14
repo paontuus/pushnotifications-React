@@ -3,7 +3,7 @@ importScripts("https://www.gstatic.com/firebasejs/5.5.8/firebase-messaging.js");
 
 //put Firebase messagingSenderId crendetial here
 let config = {
-   messagingSenderId: "433644215475"
+   messagingSenderId: ""
 };
 
 firebase.initializeApp(config);
