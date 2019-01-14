@@ -1,10 +1,7 @@
 import firebase from "firebase";
-import React from 'react';
-import { config } from "./push/firebaseConfig.jsx";
+import { config } from "../push/firebaseConfig.js";
 
-
-class InitNotification extends React.Component{  
-  render(){
+export function InitNotification(){ 
 
     firebase.initializeApp(config);
 
@@ -38,10 +35,10 @@ class InitNotification extends React.Component{
  
     messaging.onMessage(payload => {
       console.log("Notification Received", payload);
-     //this is the function that gets triggered when you receive a 
-     //push notification while you’re on the page. So you can 
-     //create a corresponding UI for you to have the push 
-     //notification handled. 
+     /*
+     this is the function that gets triggered when you receive a 
+     push notification while you are on the page. Add more functionality or another UI.
+     */ 
       navigator.serviceWorker.ready.then(function(registration) {
         registration.showNotification('Web-notis-firebase', {
           body: 'Web-notis-test',
@@ -51,11 +48,6 @@ class InitNotification extends React.Component{
       });
     });
 
-   return null;
-
-  } 
 }
-
-export default InitNotification;
 
 
