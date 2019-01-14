@@ -8,3 +8,11 @@ Put firebase-messaging-sw.js into your public folder, put initNotification.js an
 
 ### How to configure
 Put your Firebase credentials into firebaseConfig.js and into firebase-messaging-sw.js. Import and call the function inside initNotifications.
+
+### How to use
+Send a CURL commando with your fcm auth key and the firebase token that will be generated in the console when the website is loaded (use and handle that token for your own needs).
+
+When the CURL commando is received, a notification will be shown and it will show the messaging.onMessage() example inside initNotification.js (edit for your own needs).
+However, if the browser is in the background it will use the template used in your CURL commando. For example:
+
+curl -X POST --header "Authorization: key=Put-your-auth-key-here" --header "Content-Type: application/json" -d "{\"to\":\"Put-your-FCM-token-here\",\"priority\":\"high\",\"notification\":{\"body\": \"FOO BAR BLA BLA\"}}" "https://fcm.googleapis.com/fcm/send"
