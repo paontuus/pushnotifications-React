@@ -6,7 +6,7 @@ let config = {
    messagingSenderId: ""
 };
 
-firebase.initializeApp(config);
+firebase.initializeApp(config); 
 
 const messaging = firebase.messaging();
 

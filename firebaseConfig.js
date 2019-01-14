@@ -5,5 +5,5 @@ export let config = {
   databaseURL: "",
   projectId: "",
   storageBucket: "",
-  messagingSenderId: "" 
+  messagingSenderId: ""  
   };

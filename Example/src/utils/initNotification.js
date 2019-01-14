@@ -43,7 +43,7 @@ export function InitNotification(){
         registration.showNotification('Web-notis-firebase', {
           body: 'Web-notis-test',
           icon: '', 
-          tag: 'Web-notis-test'
+          tag: 'Web-notis-test' 
         }); 
       });
     });
